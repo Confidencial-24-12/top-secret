@@ -5,27 +5,41 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Juan Cruz & Danae | Nuestra boda</title>
+
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;500;600&family=Cormorant+Garamond:wght@400;500;600&display=swap');
 
 :root {
-    --cream: #FFFFFF;
+    --cream: #0B1F3A;
     --gold: #C5A253;
-    --dark: #151515;
-    --soft: #F4F7FB;
+    --dark: #FFFFFF;
+    --soft: #152E4B;
     --azul-noche: #0B1F3A;
     --azul-profundo: #245B91;
 }
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
-  background: var(--cream);
-  color: var(--dark);
+  background: #0B1F3A;
+  color: #FFFFFF;
   font-family: 'Montserrat', sans-serif;
   text-align: center;
 }
-button { font-family: inherit; cursor: pointer; }
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* PORTADA */
 .cover {
   min-height: 100vh;
   display: flex;
@@ -33,35 +47,56 @@ button { font-family: inherit; cursor: pointer; }
   justify-content: center;
   padding: 30px 20px;
   background:
-    linear-gradient(#faf7f0d9,#faf7f0e8),
-    radial-gradient(ellipse at top, #d8c3a8, transparent 65%);
+    radial-gradient(ellipse at top, #245B91 0%, #152E4B 35%, #0B1F3A 75%);
+  color: #FFFFFF;
 }
-.cover-inner { max-width: 500px; width: 100%; }
-.ornament { color: var(--gold); font-size: 30px; letter-spacing: 12px; }
+
+.cover-inner {
+  max-width: 500px;
+  width: 100%;
+}
+
+.ornament {
+  color: var(--gold);
+  font-size: 30px;
+  letter-spacing: 12px;
+}
+
 .small {
   font-size: 10px;
   letter-spacing: 4px;
   text-transform: uppercase;
   margin: 24px 0;
+  color: #FFFFFF;
 }
+
 .names {
   font-family: 'Great Vibes', cursive;
   font-size: clamp(58px, 13vw, 88px);
-  color: var(--azul-noche);
+  color: #FFFFFF;
   line-height: 1.2;
   margin: 10px 0;
+  text-shadow: 0 2px 12px #00000055;
 }
-.and { font-family: 'Cormorant Garamond',serif; font-size: 30px; }
+
+.and {
+  font-family: 'Cormorant Garamond',serif;
+  font-size: 30px;
+  color: var(--gold);
+}
+
 .date {
   font-family: 'Cormorant Garamond',serif;
   font-size: 25px;
   letter-spacing: 5px;
   margin: 28px 0;
+  color: #FFFFFF;
 }
+
 .open-btn, .action {
- background: var(--azul-profundo);
-color: #FFFFFF;
-border: 1px solid var(--gold);
+  background: var(--azul-profundo);
+  color: #FFFFFF;
+  border: 1px solid var(--gold);
   border-radius: 30px;
   padding: 14px 28px;
   letter-spacing: 2px;
@@ -69,114 +104,214 @@ border: 1px solid var(--gold);
   text-transform: uppercase;
   transition: .3s;
 }
+
 .open-btn:hover, .action:hover {
-    background: var(--azul-noche);
-    border-color: var(--gold);
+  background: #0B1F3A;
+  border-color: var(--gold);
+  transform: translateY(-2px);
 }
-main { display: none; }
-main.visible { display: block; animation: appear 1s ease; }
-@keyframes appear { from {opacity:0;transform:translateY(15px)} to {opacity:1;transform:translateY(0)} }
-section { padding: 75px 20px; }
-.section-inner { max-width: 650px; margin: auto; }
+
+/* CONTENIDO */
+main {
+  display: none;
+  background: #0B1F3A;
+}
+
+main.visible {
+  display: block;
+  animation: appear 1s ease;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+section {
+  padding: 75px 20px;
+  background: #0B1F3A;
+  color: #FFFFFF;
+}
+
+.section-inner {
+  max-width: 650px;
+  margin: auto;
+}
+
 .script {
   font-family: 'Great Vibes', cursive;
-  color: var(--azul-noche);
+  color: var(--gold);
   font-size: 49px;
   margin: 12px 0;
 }
+
 h2 {
   font-family: 'Cormorant Garamond',serif;
   font-size: 32px;
   font-weight: 400;
-  color: var(--azul-noche);
+  color: #FFFFFF;
 }
-p { font-size: 13px; line-height: 2; font-weight: 300; }
-.rule { width: 65px; height: 1px; background: var(--gold); margin: 25px auto; }
+
+p {
+  font-size: 13px;
+  line-height: 2;
+  font-weight: 300;
+  color: #F1F1F1;
+}
+
+.rule {
+  width: 65px;
+  height: 1px;
+  background: var(--gold);
+  margin: 25px auto;
+}
+
+/* CUENTA REGRESIVA */
 .countdown {
   display: flex;
   justify-content: center;
   gap: 13px;
   margin: 30px auto;
 }
+
 .time {
-  background: #FFFFFF;
+  background: #152E4B;
   border: 1px solid var(--gold);
   border-radius: 12px;
   padding: 15px 9px;
   min-width: 68px;
 }
+
 .time strong {
   display: block;
   font-family: 'Cormorant Garamond',serif;
   font-size: 30px;
-  color: var(--azul-noche);
+  color: #FFFFFF;
   font-weight: 400;
 }
+
 .time span {
   font-size: 8px;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: #151515;
+  color: #FFFFFF;
 }
+
+/* SECCIONES ALTERNADAS */
 .soft-bg {
-  background: #F4F7FB;
+  background: #122944;
 }
- .card {
-  background: #FFFFFF;
+
+/* TARJETAS */
+.card {
+  background: #152E4B;
   border: 1px solid var(--gold);
   padding: 30px 20px;
   margin: 18px 0;
   border-radius: 4px;
+  color: #FFFFFF;
 }
+
+/* GALERÍA */
 .gallery {
   display: grid;
   grid-template-columns: repeat(2,1fr);
   gap: 12px;
   margin-top: 25px;
 }
+
 .photo {
   min-height: 190px;
   border: 1px solid var(--gold);
-  background: linear-gradient(145deg, #F4F7FB, #FFFFFF);
+  background: linear-gradient(145deg, #245B91, #152E4B);
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--azul-noche);
+  color: #FFFFFF;
   font-size: 11px;
   padding: 15px;
 }
-.photo:first-child { grid-column: span 2; min-height: 240px; }
-.actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 22px; }
-.action { text-decoration: none; display: inline-block; }
+
+.photo:first-child {
+  grid-column: span 2;
+  min-height: 240px;
+}
+
+/* BOTONES */
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 22px;
+}
+
+.action {
+  text-decoration: none;
+  display: inline-block;
+}
+
 .outline {
   background: transparent;
-  color: var(--azul-noche);
+  color: #FFFFFF;
   border: 1px solid var(--gold);
 }
-  footer {
-  padding: 45px 20px;
-  background: #F4F7FB;
+
+.outline:hover {
+  background: var(--azul-profundo);
 }
-  footer .names { font-size: 52px; }
+
+/* PIE DE PÁGINA */
+footer {
+  padding: 45px 20px;
+  background: #08182C;
+  color: #FFFFFF;
+  border-top: 1px solid var(--gold);
+}
+
+footer .names {
+  font-size: 52px;
+}
+
+/* BOTÓN DE MÚSICA */
 #music {
   position: fixed;
   right: 16px;
   bottom: 16px;
   z-index: 10;
   border: 1px solid var(--gold);
-  background: #FFFFFF;
-  color: var(--azul-noche);
+  background: var(--azul-profundo);
+  color: #FFFFFF;
   border-radius: 50%;
   width: 48px;
   height: 48px;
   font-size: 20px;
 }
+
+#music:hover {
+  background: #0B1F3A;
+}
+
+/* ADAPTACIÓN PARA CELULARES */
 @media(max-width:380px) {
-  .countdown { gap: 6px; }
-  .time { min-width: 59px; padding: 12px 5px; }
+  .countdown {
+    gap: 6px;
+  }
+
+  .time {
+    min-width: 59px;
+    padding: 12px 5px;
+  }
 }
 </style>
 </head>
+
 <body>
 
 <!-- PORTADA -->
@@ -197,6 +332,7 @@ p { font-size: 13px; line-height: 2; font-weight: 300; }
 
 <main id="invitation">
 
+  <!-- PRESENTACIÓN -->
   <section>
     <div class="ornament">✧ ❀ ✧</div>
     <div class="small">¡Nos casamos!</div>
@@ -228,17 +364,20 @@ p { font-size: 13px; line-height: 2; font-weight: 300; }
       <div class="script">Nuestro gran día</div>
       <h2>La celebración</h2>
       <div class="rule"></div>
+
       <div class="card">
         <div class="ornament">♡</div>
         <h2>Ceremonia</h2>
         <p>Próximamente compartiremos el horario y el lugar.</p>
       </div>
+
       <div class="card">
         <div class="ornament">✧</div>
         <h2>Fiesta</h2>
         <p>¡Después de dar el sí, queremos celebrar con vos!</p>
         <p>Próximamente compartiremos los detalles.</p>
       </div>
+
       <div class="actions">
         <a class="action outline" href="#ubicacion">Ver ubicación</a>
       </div>
@@ -252,6 +391,7 @@ p { font-size: 13px; line-height: 2; font-weight: 300; }
       <h2>Dress code</h2>
       <div class="rule"></div>
       <p>Queremos que nos acompañes con tu mejor look.</p>
+
       <div class="card">
         <h2>Elegancia</h2>
         <p>Próximamente indicaremos el código de vestimenta y los colores sugeridos.</p>
@@ -265,6 +405,7 @@ p { font-size: 13px; line-height: 2; font-weight: 300; }
       <div class="script">Nuestros recuerdos</div>
       <h2>Un poquito de nosotros</h2>
       <p>Algunas imágenes de nuestra historia de amor.</p>
+
       <div class="gallery">
         <div class="photo">Foto principal de los novios</div>
         <div class="photo">Foto 2</div>
@@ -281,6 +422,7 @@ p { font-size: 13px; line-height: 2; font-weight: 300; }
       <div class="script">Un regalo especial</div>
       <h2>Tu presencia es nuestro mejor regalo</h2>
       <p>Si además querés hacernos un presente, próximamente compartiremos algunas opciones.</p>
+
       <div class="card">
         <div class="ornament">♡</div>
         <p>Información de regalos y transferencia próximamente.</p>
@@ -294,25 +436,29 @@ p { font-size: 13px; line-height: 2; font-weight: 300; }
       <div class="script">¿Nos acompañás?</div>
       <h2>Queremos compartirlo con vos</h2>
       <p>La ubicación y los horarios se actualizarán aquí.</p>
+
       <div class="actions">
         <a class="action" id="mapButton" href="#" target="_blank">Cómo llegar</a>
       </div>
     </div>
   </section>
 
-  <!-- CONFIRMACION -->
+  <!-- CONFIRMACIÓN -->
   <section class="soft-bg">
     <div class="section-inner">
       <div class="script">¡Te esperamos!</div>
       <h2>Confirmá tu asistencia</h2>
       <p>Tu presencia hará que este día sea todavía más especial.</p>
+
       <div class="actions">
         <a class="action" id="rsvpButton" href="#" target="_blank">Confirmar por WhatsApp</a>
       </div>
+
       <p style="font-size:10px">¡Nos encantará celebrar con vos!</p>
     </div>
   </section>
 
+  <!-- FINAL -->
   <footer>
     <div class="ornament">✧ ♡ ✧</div>
     <div class="names">Juan Cruz & Danae</div>
@@ -338,24 +484,28 @@ function openInvitation() {
 function updateCountdown() {
   const diff = WEDDING_DATE.getTime() - Date.now();
   const ids = ['days','hours','minutes','seconds'];
+
   if (diff <= 0) {
     ids.forEach(id => document.getElementById(id).textContent = '00');
     return;
   }
+
   const values = [
     Math.floor(diff / 86400000),
     Math.floor((diff % 86400000) / 3600000),
     Math.floor((diff % 3600000) / 60000),
     Math.floor((diff % 60000) / 1000)
   ];
+
   ids.forEach((id,i) => {
     document.getElementById(id).textContent = String(values[i]).padStart(2,'0');
   });
 }
+
 updateCountdown();
 setInterval(updateCountdown,1000);
 
-// COMPLETAR ESTOS DATOS CUANDO LOS TENGAMOS
+// DATOS PARA COMPLETAR
 const WHATSAPP = ''; // Ejemplo: 5492641234567
 const MAPS_URL = ''; // Pegar aquí el enlace de Google Maps
 const MUSIC_URL = ''; // Pegar aquí el enlace directo a un archivo de audio
@@ -366,6 +516,7 @@ document.getElementById('rsvpButton').addEventListener('click',function(e) {
     alert('Pronto habilitaremos la confirmación de asistencia.');
     return;
   }
+
   this.href = 'https://wa.me/' + WHATSAPP +
     '?text=' + encodeURIComponent('¡Hola Juan y Danae! Confirmo mi asistencia a su casamiento del 24 de diciembre. ❤️');
 });
@@ -387,12 +538,15 @@ function toggleMusic() {
     alert('Pronto agregaremos la música de nuestra invitación.');
     return;
   }
+
   if (!playing) {
     audio.src = MUSIC_URL;
+
     audio.play().then(() => {
       playing = true;
       document.getElementById('music').textContent = 'Ⅱ';
     }).catch(() => alert('No se pudo reproducir la música. Intentá nuevamente.'));
+
   } else {
     audio.pause();
     playing = false;
@@ -400,5 +554,6 @@ function toggleMusic() {
   }
 }
 </script>
+
 </body>
 </html>
