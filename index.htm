@@ -31,7 +31,7 @@ body {
   color: var(--white-soft);
   text-align: center;
   font-family: 'Allura', cursive;
-  font-size: 29px;
+  font-size: 25px;
 }
 button { cursor: pointer; font-family: inherit; }
 .cover {
@@ -54,7 +54,7 @@ button { cursor: pointer; font-family: inherit; }
 }
 .names {
   color: var(--white);
-  font-family: 'Great Vibes', cursive;
+  font-family: 'Allura', cursive;
   font-size: clamp(64px, 14vw, 100px);
   font-weight: 400;
   line-height: 1.05;
@@ -79,8 +79,8 @@ p {
   margin: 12px auto;
   color: rgba(255,255,255,.88);
   font-family: 'Allura', cursive;
-  font-size: 29px;
-  line-height: 1.28;
+  font-size: 25px;
+  line-height: 1.4;
   font-weight: 400;
 }
 .open-btn, .action {
@@ -91,7 +91,7 @@ p {
   border-radius: 30px;
   padding: 12px 27px;
   font-family: 'Allura', cursive;
-  font-size: 25px;
+  font-size: 24px;
   text-decoration: none;
   transition: .25s ease;
 }
@@ -107,15 +107,15 @@ section { padding: 68px 20px; }
 .section-inner { max-width: 720px; margin: auto; }
 .script {
   color: var(--gold-soft);
-  font-family: 'Great Vibes', cursive;
-  font-size: clamp(43px, 8vw, 60px);
+  font-family: 'Allura', cursive;
+  font-size: clamp(42px, 8vw, 54px);
   line-height: 1.15;
   margin: 8px 0 14px;
 }
 h2 {
   color: var(--white);
   font-family: 'Allura', cursive;
-  font-size: 43px;
+  font-size: 42px;
   font-weight: 400;
   line-height: 1.1;
   margin: 10px 0;
@@ -129,7 +129,7 @@ h2 {
   padding: 27px 20px;
   margin: 18px 0;
 }
-.card p { font-size: 29px; }
+.card p { font-size: 25px; }
 .countdown {
   display: flex;
   justify-content: center;
@@ -154,8 +154,8 @@ h2 {
 .time span {
   display: block;
   color: var(--white-soft);
-  font-family: 'Allura', cursive;
-  font-size: 21px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
 }
 .color-options {
   display: flex;
@@ -170,7 +170,7 @@ h2 {
   gap: 9px;
   color: var(--white);
   font-family: 'Allura', cursive;
-  font-size: 29px;
+  font-size: 25px;
 }
 .swatch {
   width: 27px;
@@ -198,17 +198,19 @@ h2 {
   border-radius: 4px;
   color: var(--gold-soft);
   background: linear-gradient(145deg, #152E4B, #0B1F3A);
-  font-family: 'Allura', cursive;
-  font-size: 26px;
+  overflow: hidden;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
 }
 .photo:first-child { grid-column: span 2; min-height: 260px; }
+.photo img, img.photo { width: 100%; height: 100%; object-fit: cover; display: block; }
 footer {
   padding: 42px 20px;
   background: var(--navy-deep);
   border-top: 1px solid rgba(197,162,83,.45);
 }
 footer .names { font-size: clamp(48px, 11vw, 66px); }
-footer p { font-family: 'Allura', cursive; font-size: 27px; }
+footer p { font-family: 'Allura', cursive; font-size: 25px; }
 #music {
   position: fixed;
   right: 16px;
@@ -233,7 +235,7 @@ footer p { font-family: 'Allura', cursive; font-size: 27px; }
 </head>
 
 <body>
-
+<!-- PORTADA -->
 <div class="cover" id="cover">
   <div class="cover-inner">
     <div class="ornament">✧ ❀ ✧</div>
@@ -251,18 +253,20 @@ footer p { font-family: 'Allura', cursive; font-size: 27px; }
 
 <main id="invitation">
 
+  <!-- NUESTRA HISTORIA -->
   <section>
     <div class="ornament">✧ ♡ ✧</div>
     <div class="small">Nuestra historia</div>
     <div class="script">Once años de amor, una vida compartida</div>
     <div class="rule"></div>
-    <p>Hace 11 años comenzamos a caminar juntos. Hace 5 años elegimos unir nuestras vidas también ante la ley, y en este tiempo formamos nuestra familia y llegaron nuestras tres hijas, el regalo más hermoso de nuestra historia.</p>
+    <p>Hace 11 años comenzamos a caminar juntos. Hace 5 años elegimos dar el Sí, y en este tiempo formamos nuestra familia, el regalo más hermoso de nuestra historia.</p>
     <p>Hoy queremos dar un nuevo paso, recibir la bendición de Dios y celebrar nuestro amor ante Él, rodeados de las personas que queremos.</p>
     <p>Esta historia ya tiene muchas páginas escritas… y nos hace muy felices poder compartir este capítulo con vos.</p>
     <div class="script" style="font-size:44px;margin-top:22px">¡Nos casamos por Iglesia!</div>
     <div class="names" style="font-size:clamp(52px,11vw,76px)">Juan Cruz & Danae</div>
   </section>
 
+  <!-- CUENTA REGRESIVA -->
   <section class="soft-bg">
     <div class="section-inner">
       <div class="small">Cada vez falta menos</div>
@@ -277,6 +281,7 @@ footer p { font-family: 'Allura', cursive; font-size: 27px; }
     </div>
   </section>
 
+  <!-- CEREMONIA Y FIESTA -->
   <section>
     <div class="section-inner">
       <div class="small">Un día para recordar</div>
@@ -302,12 +307,13 @@ footer p { font-family: 'Allura', cursive; font-size: 27px; }
     </div>
   </section>
 
+  <!-- DRESS CODE -->
   <section class="soft-bg">
     <div class="section-inner">
       <div class="small">Un detalle para compartir</div>
       <div class="script">Dress code</div>
       <div class="rule"></div>
-      <p>Nos gustaría que nos acompañes con una vestimenta elegante, en alguno de estos tonos:</p>
+      <p>Nos gustaría que nos acompañes con una vestimenta elegante, en alguno de estos tonos o accesorios:</p>
       <div class="color-options">
         <div class="color-choice"><span class="swatch blue"></span>Azul</div>
         <div class="color-choice"><span class="swatch black"></span>Negro</div>
@@ -315,19 +321,17 @@ footer p { font-family: 'Allura', cursive; font-size: 27px; }
     </div>
   </section>
 
+  <!-- REGALOS -->
   <section>
     <div class="section-inner">
       <div class="small">Un gesto de cariño</div>
       <div class="script">Tu presencia es nuestro mejor regalo</div>
       <div class="rule"></div>
-      <p>Lo más importante para nosotros es compartir este día con vos. Si además deseás hacernos un regalo, una colaboración para esta nueva etapa que comenzamos será recibida con muchísimo cariño.</p>
-      <div class="card">
-        <div class="ornament">♡</div>
-        <p>Más adelante compartiremos los datos para quienes deseen hacerlo.</p>
-      </div>
+      <p>Lo más importante para nosotros es compartir este día con quienes queremos. Si desean hacernos un presente, agradeceremos de corazón su colaboración para seguir construyendo nuestros sueños.</p>
     </div>
   </section>
 
+  <!-- CONFIRMACIÓN -->
   <section class="soft-bg">
     <div class="section-inner">
       <div class="script">¡Te esperamos!</div>
@@ -339,17 +343,16 @@ footer p { font-family: 'Allura', cursive; font-size: 27px; }
     </div>
   </section>
 
+  <!-- FOTOGRAFÍAS AL FINAL: colocar aquí las fotos actuales de la pareja y sus hijas -->
   <section>
     <div class="section-inner">
-      <div class="small">Un recorrido por nuestra historia</div>
-      <div class="script">Nuestros recuerdos</div>
-      <p>Once años, una familia y miles de momentos que nos trajeron hasta acá.</p>
       <div class="gallery">
-        <div class="photo">Foto principal de los novios</div>
-        <div class="photo">Foto 2</div>
-        <div class="photo">Foto 3</div>
-        <div class="photo">Foto 4</div>
-        <div class="photo">Foto 5</div>
+        <!-- Reemplazar cada bloque por una imagen: <img class="photo" src="nombre-de-la-foto.jpg" alt="Juan Cruz, Danae y su familia"> -->
+        <div class="photo" aria-label="Fotografía familiar"></div>
+        <div class="photo" aria-label="Fotografía de los novios"></div>
+        <div class="photo" aria-label="Fotografía familiar"></div>
+        <div class="photo" aria-label="Fotografía de los novios"></div>
+        <div class="photo" aria-label="Fotografía familiar"></div>
       </div>
     </div>
   </section>
@@ -394,6 +397,7 @@ function updateCountdown() {
 updateCountdown();
 setInterval(updateCountdown, 1000);
 
+// COMPLETAR CUANDO TENGAMOS LOS DATOS DEFINITIVOS
 const WHATSAPP = ''; // Ejemplo: 5492641234567
 const MAPS_URL = ''; // Enlace de Google Maps de la parroquia
 const MUSIC_URL = ''; // Enlace directo al archivo de audio
