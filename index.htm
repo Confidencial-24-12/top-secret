@@ -4,15 +4,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Juan Crus & Danae | Nuestra boda</title>
+<title>Juan Cruz & Danae | Nuestra boda</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;500;600&family=Cormorant+Garamond:wght@400;500;600&display=swap');
 
 :root {
-  --cream: #faf7f0;
-  --gold: #b18a62;
-  --dark: #514438;
-  --soft: #e9dfd0;
+    --cream: #FFFFFF;
+    --gold: #C5A253;
+    --dark: #151515;
+    --soft: #F4F7FB;
+    --azul-noche: #0B1F3A;
+    --azul-profundo: #245B91;
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
@@ -45,7 +47,7 @@ button { font-family: inherit; cursor: pointer; }
 .names {
   font-family: 'Great Vibes', cursive;
   font-size: clamp(58px, 13vw, 88px);
-  color: var(--gold);
+  color: var(--azul-noche);
   line-height: 1.2;
   margin: 10px 0;
 }
@@ -57,9 +59,9 @@ button { font-family: inherit; cursor: pointer; }
   margin: 28px 0;
 }
 .open-btn, .action {
-  background: var(--gold);
-  color: white;
-  border: 1px solid var(--gold);
+ background: var(--azul-profundo);
+color: #FFFFFF;
+border: 1px solid var(--gold);
   border-radius: 30px;
   padding: 14px 28px;
   letter-spacing: 2px;
@@ -67,7 +69,10 @@ button { font-family: inherit; cursor: pointer; }
   text-transform: uppercase;
   transition: .3s;
 }
-.open-btn:hover, .action:hover { background: var(--dark); }
+.open-btn:hover, .action:hover {
+    background: var(--azul-noche);
+    border-color: var(--gold);
+}
 main { display: none; }
 main.visible { display: block; animation: appear 1s ease; }
 @keyframes appear { from {opacity:0;transform:translateY(15px)} to {opacity:1;transform:translateY(0)} }
@@ -75,7 +80,7 @@ section { padding: 75px 20px; }
 .section-inner { max-width: 650px; margin: auto; }
 .script {
   font-family: 'Great Vibes', cursive;
-  color: var(--gold);
+  color: var(--azul-noche);
   font-size: 49px;
   margin: 12px 0;
 }
@@ -83,6 +88,7 @@ h2 {
   font-family: 'Cormorant Garamond',serif;
   font-size: 32px;
   font-weight: 400;
+  color: var(--azul-noche);
 }
 p { font-size: 13px; line-height: 2; font-weight: 300; }
 .rule { width: 65px; height: 1px; background: var(--gold); margin: 25px auto; }
@@ -93,8 +99,8 @@ p { font-size: 13px; line-height: 2; font-weight: 300; }
   margin: 30px auto;
 }
 .time {
-  background: white;
-  border: 1px solid var(--soft);
+  background: #FFFFFF;
+  border: 1px solid var(--gold);
   border-radius: 12px;
   padding: 15px 9px;
   min-width: 68px;
@@ -103,14 +109,21 @@ p { font-size: 13px; line-height: 2; font-weight: 300; }
   display: block;
   font-family: 'Cormorant Garamond',serif;
   font-size: 30px;
-  color: var(--gold);
+  color: var(--azul-noche);
   font-weight: 400;
 }
-.time span { font-size: 8px; letter-spacing: 1px; text-transform: uppercase; }
-.soft-bg { background: #f0e9de; }
-.card {
-  background: #fffdf9;
-  border: 1px solid var(--soft);
+.time span {
+  font-size: 8px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #151515;
+}
+.soft-bg {
+  background: #F4F7FB;
+}
+ .card {
+  background: #FFFFFF;
+  border: 1px solid var(--gold);
   padding: 30px 20px;
   margin: 18px 0;
   border-radius: 4px;
@@ -123,29 +136,36 @@ p { font-size: 13px; line-height: 2; font-weight: 300; }
 }
 .photo {
   min-height: 190px;
-  border: 1px solid var(--soft);
-  background: linear-gradient(145deg,#e9dfd0,#faf7f0);
+  border: 1px solid var(--gold);
+  background: linear-gradient(145deg, #F4F7FB, #FFFFFF);
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #947c61;
+  color: var(--azul-noche);
   font-size: 11px;
   padding: 15px;
 }
 .photo:first-child { grid-column: span 2; min-height: 240px; }
 .actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 22px; }
 .action { text-decoration: none; display: inline-block; }
-.outline { background: transparent; color: var(--gold); }
-footer { padding: 45px 20px; background: #eee5d9; }
-footer .names { font-size: 52px; }
+.outline {
+  background: transparent;
+  color: var(--azul-noche);
+  border: 1px solid var(--gold);
+}
+  footer {
+  padding: 45px 20px;
+  background: #F4F7FB;
+}
+  footer .names { font-size: 52px; }
 #music {
   position: fixed;
   right: 16px;
   bottom: 16px;
   z-index: 10;
   border: 1px solid var(--gold);
-  background: #fffaf2;
-  color: var(--gold);
+  background: #FFFFFF;
+  color: var(--azul-noche);
   border-radius: 50%;
   width: 48px;
   height: 48px;
@@ -164,7 +184,7 @@ footer .names { font-size: 52px; }
   <div class="cover-inner">
     <div class="ornament">✧ ❀ ✧</div>
     <div class="small">Una historia de amor que continúa</div>
-    <div class="names">Juan Crus</div>
+    <div class="names">Juan Cruz</div>
     <div class="and">&</div>
     <div class="names">Danae</div>
     <div class="rule"></div>
@@ -181,7 +201,7 @@ footer .names { font-size: 52px; }
     <div class="ornament">✧ ❀ ✧</div>
     <div class="small">¡Nos casamos!</div>
     <div class="script">El comienzo de siempre</div>
-    <h2>Juan Crus & Danae</h2>
+    <h2>Juan Cruz & Danae</h2>
     <div class="rule"></div>
     <p>Hay momentos que merecen ser celebrados y personas con quienes queremos compartirlos.</p>
     <p>Nos encantaría que nos acompañes en este día tan importante de nuestras vidas.</p>
@@ -295,7 +315,7 @@ footer .names { font-size: 52px; }
 
   <footer>
     <div class="ornament">✧ ♡ ✧</div>
-    <div class="names">Juan Crus & Danae</div>
+    <div class="names">Juan Cruz & Danae</div>
     <p>24 · 12 · 2026</p>
     <p>Con amor, los esperamos.</p>
   </footer>
