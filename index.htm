@@ -4,350 +4,269 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0B1F3A">
 <title>Juan Cruz & Danae | Nuestra boda</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;500;600&family=Cormorant+Garamond:wght@400;500;600&display=swap');
-
 :root {
-    --cream: #0B1F3A;
-    --gold: #C5A253;
-    --dark: #FFFFFF;
-    --soft: #152E4B;
-    --azul-noche: #0B1F3A;
-    --azul-profundo: #245B91;
+  --navy: #0B1F3A;
+  --navy-deep: #08182C;
+  --blue-dark: #152E4B;
+  --blue-mid: #245B91;
+  --blue-section: #122944;
+  --gold: #C5A253;
+  --gold-soft: #D9BD7A;
+  --white: #FFFFFF;
+  --white-soft: #F3F0E9;
 }
-
-* {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
 body {
   margin: 0;
-  background: #0B1F3A;
-  color: #FFFFFF;
-  font-family: 'Montserrat', sans-serif;
+  background: var(--navy);
+  color: var(--white-soft);
   text-align: center;
+  font-family: 'Allura', cursive;
+  font-size: 29px;
 }
-
-button {
-  font-family: inherit;
-  cursor: pointer;
-}
-
-/* PORTADA */
+button { cursor: pointer; font-family: inherit; }
 .cover {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 30px 20px;
+  padding: 38px 20px;
   background:
-    radial-gradient(ellipse at top, #245B91 0%, #152E4B 35%, #0B1F3A 75%);
-  color: #FFFFFF;
+    radial-gradient(ellipse at 50% 12%, rgba(36,91,145,.42), transparent 55%),
+    linear-gradient(145deg, var(--navy-deep), var(--navy) 55%, #102945);
 }
-
-.cover-inner {
-  max-width: 500px;
-  width: 100%;
-}
-
-.ornament {
-  color: var(--gold);
-  font-size: 30px;
-  letter-spacing: 12px;
-}
-
+.cover-inner { width: 100%; max-width: 560px; }
+.ornament { color: var(--gold); font-size: 28px; letter-spacing: 9px; }
 .small {
-  font-size: 10px;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  margin: 24px 0;
-  color: #FFFFFF;
+  color: var(--gold-soft);
+  font-family: 'Allura', cursive;
+  font-size: 29px;
+  margin: 18px 0;
 }
-
 .names {
+  color: var(--white);
   font-family: 'Great Vibes', cursive;
-  font-size: clamp(58px, 13vw, 88px);
-  color: #FFFFFF;
-  line-height: 1.2;
-  margin: 10px 0;
-  text-shadow: 0 2px 12px #00000055;
+  font-size: clamp(64px, 14vw, 100px);
+  font-weight: 400;
+  line-height: 1.05;
+  margin: 8px 0;
+  text-shadow: 0 2px 18px rgba(0,0,0,.18);
 }
-
 .and {
-  font-family: 'Cormorant Garamond',serif;
-  font-size: 30px;
   color: var(--gold);
+  font-family: 'Allura', cursive;
+  font-size: 42px;
+  line-height: 1;
 }
-
 .date {
-  font-family: 'Cormorant Garamond',serif;
-  font-size: 25px;
+  color: var(--gold-soft);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 27px;
   letter-spacing: 5px;
-  margin: 28px 0;
-  color: #FFFFFF;
+  margin: 25px 0;
 }
-
+p {
+  max-width: 620px;
+  margin: 12px auto;
+  color: rgba(255,255,255,.88);
+  font-family: 'Allura', cursive;
+  font-size: 29px;
+  line-height: 1.28;
+  font-weight: 400;
+}
 .open-btn, .action {
-  background: var(--azul-profundo);
-  color: #FFFFFF;
+  display: inline-block;
+  background: transparent;
+  color: var(--white);
   border: 1px solid var(--gold);
   border-radius: 30px;
-  padding: 14px 28px;
-  letter-spacing: 2px;
-  font-size: 10px;
-  text-transform: uppercase;
-  transition: .3s;
+  padding: 12px 27px;
+  font-family: 'Allura', cursive;
+  font-size: 25px;
+  text-decoration: none;
+  transition: .25s ease;
 }
-
-.open-btn:hover, .action:hover {
-  background: #0B1F3A;
-  border-color: var(--gold);
-  transform: translateY(-2px);
-}
-
-/* CONTENIDO */
-main {
-  display: none;
-  background: #0B1F3A;
-}
-
-main.visible {
-  display: block;
-  animation: appear 1s ease;
-}
-
+.open-btn { margin-top: 22px; background: var(--blue-dark); }
+.open-btn:hover, .action:hover { background: var(--blue-mid); }
+main { display: none; }
+main.visible { display: block; animation: appear .9s ease; }
 @keyframes appear {
-  from {
-    opacity: 0;
-    transform: translateY(15px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
 }
-
-section {
-  padding: 75px 20px;
-  background: #0B1F3A;
-  color: #FFFFFF;
-}
-
-.section-inner {
-  max-width: 650px;
-  margin: auto;
-}
-
+section { padding: 68px 20px; }
+.section-inner { max-width: 720px; margin: auto; }
 .script {
+  color: var(--gold-soft);
   font-family: 'Great Vibes', cursive;
-  color: var(--gold);
-  font-size: 49px;
-  margin: 12px 0;
+  font-size: clamp(43px, 8vw, 60px);
+  line-height: 1.15;
+  margin: 8px 0 14px;
 }
-
 h2 {
-  font-family: 'Cormorant Garamond',serif;
-  font-size: 32px;
+  color: var(--white);
+  font-family: 'Allura', cursive;
+  font-size: 43px;
   font-weight: 400;
-  color: #FFFFFF;
+  line-height: 1.1;
+  margin: 10px 0;
 }
-
-p {
-  font-size: 13px;
-  line-height: 2;
-  font-weight: 300;
-  color: #F1F1F1;
+.rule { width: 68px; height: 1px; background: var(--gold); margin: 23px auto; }
+.soft-bg { background: var(--blue-section); }
+.card {
+  background: rgba(8,24,44,.48);
+  border: 1px solid rgba(197,162,83,.8);
+  border-radius: 5px;
+  padding: 27px 20px;
+  margin: 18px 0;
 }
-
-.rule {
-  width: 65px;
-  height: 1px;
-  background: var(--gold);
-  margin: 25px auto;
-}
-
-/* CUENTA REGRESIVA */
+.card p { font-size: 29px; }
 .countdown {
   display: flex;
   justify-content: center;
-  gap: 13px;
-  margin: 30px auto;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 28px auto;
 }
-
 .time {
-  background: #152E4B;
+  min-width: 75px;
+  padding: 13px 10px;
   border: 1px solid var(--gold);
-  border-radius: 12px;
-  padding: 15px 9px;
-  min-width: 68px;
+  border-radius: 9px;
+  background: rgba(8,24,44,.5);
 }
-
 .time strong {
   display: block;
-  font-family: 'Cormorant Garamond',serif;
-  font-size: 30px;
-  color: #FFFFFF;
+  color: var(--gold-soft);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 34px;
   font-weight: 400;
 }
-
 .time span {
-  font-size: 8px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: #FFFFFF;
+  display: block;
+  color: var(--white-soft);
+  font-family: 'Allura', cursive;
+  font-size: 21px;
 }
-
-/* SECCIONES ALTERNADAS */
-.soft-bg {
-  background: #122944;
-}
-
-/* TARJETAS */
-.card {
-  background: #152E4B;
-  border: 1px solid var(--gold);
-  padding: 30px 20px;
-  margin: 18px 0;
-  border-radius: 4px;
-  color: #FFFFFF;
-}
-
-/* GALERÍA */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  gap: 12px;
-  margin-top: 25px;
-}
-
-.photo {
-  min-height: 190px;
-  border: 1px solid var(--gold);
-  background: linear-gradient(145deg, #245B91, #152E4B);
+.color-options {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #FFFFFF;
-  font-size: 11px;
-  padding: 15px;
+  gap: 20px;
+  margin: 22px auto 8px;
 }
-
-.photo:first-child {
-  grid-column: span 2;
-  min-height: 240px;
-}
-
-/* BOTONES */
-.actions {
+.color-choice {
   display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  justify-content: center;
-  margin-top: 22px;
+  align-items: center;
+  gap: 9px;
+  color: var(--white);
+  font-family: 'Allura', cursive;
+  font-size: 29px;
 }
-
-.action {
-  text-decoration: none;
+.swatch {
+  width: 27px;
+  height: 27px;
   display: inline-block;
-}
-
-.outline {
-  background: transparent;
-  color: #FFFFFF;
+  border-radius: 50%;
   border: 1px solid var(--gold);
 }
-
-.outline:hover {
-  background: var(--azul-profundo);
+.swatch.blue { background: #152E4B; }
+.swatch.black { background: #08090B; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 22px; }
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 26px;
 }
-
-/* PIE DE PÁGINA */
+.photo {
+  min-height: 190px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  border: 1px solid var(--gold);
+  border-radius: 4px;
+  color: var(--gold-soft);
+  background: linear-gradient(145deg, #152E4B, #0B1F3A);
+  font-family: 'Allura', cursive;
+  font-size: 26px;
+}
+.photo:first-child { grid-column: span 2; min-height: 260px; }
 footer {
-  padding: 45px 20px;
-  background: #08182C;
-  color: #FFFFFF;
-  border-top: 1px solid var(--gold);
+  padding: 42px 20px;
+  background: var(--navy-deep);
+  border-top: 1px solid rgba(197,162,83,.45);
 }
-
-footer .names {
-  font-size: 52px;
-}
-
-/* BOTÓN DE MÚSICA */
+footer .names { font-size: clamp(48px, 11vw, 66px); }
+footer p { font-family: 'Allura', cursive; font-size: 27px; }
 #music {
   position: fixed;
   right: 16px;
   bottom: 16px;
   z-index: 10;
-  border: 1px solid var(--gold);
-  background: var(--azul-profundo);
-  color: #FFFFFF;
-  border-radius: 50%;
   width: 48px;
   height: 48px;
-  font-size: 20px;
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+  background: var(--blue-dark);
+  color: var(--gold-soft);
+  font-size: 22px;
 }
-
-#music:hover {
-  background: #0B1F3A;
-}
-
-/* ADAPTACIÓN PARA CELULARES */
-@media(max-width:380px) {
-  .countdown {
-    gap: 6px;
-  }
-
-  .time {
-    min-width: 59px;
-    padding: 12px 5px;
-  }
+@media (max-width: 420px) {
+  section { padding: 54px 17px; }
+  .countdown { gap: 7px; }
+  .time { min-width: 65px; padding: 11px 6px; }
+  .photo { min-height: 155px; }
+  .photo:first-child { min-height: 210px; }
 }
 </style>
 </head>
 
 <body>
 
-<!-- PORTADA -->
 <div class="cover" id="cover">
   <div class="cover-inner">
     <div class="ornament">✧ ❀ ✧</div>
-    <div class="small">Una historia de amor que continúa</div>
+    <div class="small">Una historia de amor que sigue escribiéndose</div>
     <div class="names">Juan Cruz</div>
     <div class="and">&</div>
     <div class="names">Danae</div>
     <div class="rule"></div>
     <div class="date">24 · 12 · 2026</div>
-    <p>Tenemos algo muy especial para compartir con vos.</p>
+    <p>Después de tantos años compartiendo la vida, queremos celebrar con vos un momento muy especial.</p>
     <button class="open-btn" onclick="openInvitation()">Abrir invitación ♡</button>
-    <div class="ornament" style="margin-top:35px">❀</div>
+    <div class="ornament" style="margin-top:32px">❀</div>
   </div>
 </div>
 
 <main id="invitation">
 
-  <!-- PRESENTACIÓN -->
   <section>
-    <div class="ornament">✧ ❀ ✧</div>
-    <div class="small">¡Nos casamos!</div>
-    <div class="script">El comienzo de siempre</div>
-    <h2>Juan Cruz & Danae</h2>
+    <div class="ornament">✧ ♡ ✧</div>
+    <div class="small">Nuestra historia</div>
+    <div class="script">Once años de amor, una vida compartida</div>
     <div class="rule"></div>
-    <p>Hay momentos que merecen ser celebrados y personas con quienes queremos compartirlos.</p>
-    <p>Nos encantaría que nos acompañes en este día tan importante de nuestras vidas.</p>
+    <p>Hace 11 años comenzamos a caminar juntos. Hace 5 años elegimos unir nuestras vidas también ante la ley, y en este tiempo formamos nuestra familia y llegaron nuestras tres hijas, el regalo más hermoso de nuestra historia.</p>
+    <p>Hoy queremos dar un nuevo paso, recibir la bendición de Dios y celebrar nuestro amor ante Él, rodeados de las personas que queremos.</p>
+    <p>Esta historia ya tiene muchas páginas escritas… y nos hace muy felices poder compartir este capítulo con vos.</p>
+    <div class="script" style="font-size:44px;margin-top:22px">¡Nos casamos por Iglesia!</div>
+    <div class="names" style="font-size:clamp(52px,11vw,76px)">Juan Cruz & Danae</div>
   </section>
 
-  <!-- CUENTA REGRESIVA -->
   <section class="soft-bg">
     <div class="section-inner">
-      <div class="small">La cuenta regresiva comenzó</div>
-      <div class="script">Falta muy poquito</div>
+      <div class="small">Cada vez falta menos</div>
+      <div class="script">La cuenta regresiva</div>
       <div class="countdown">
         <div class="time"><strong id="days">00</strong><span>Días</span></div>
         <div class="time"><strong id="hours">00</strong><span>Horas</span></div>
@@ -358,54 +277,73 @@ footer .names {
     </div>
   </section>
 
-  <!-- EVENTO -->
   <section>
     <div class="section-inner">
+      <div class="small">Un día para recordar</div>
       <div class="script">Nuestro gran día</div>
-      <h2>La celebración</h2>
       <div class="rule"></div>
-
       <div class="card">
         <div class="ornament">♡</div>
-        <h2>Ceremonia</h2>
-        <p>Próximamente compartiremos el horario y el lugar.</p>
+        <h2>La ceremonia</h2>
+        <p>Queremos encontrarnos para dar este paso tan importante ante Dios.</p>
+        <h2>Parroquia Nuestra Señora de Luján</h2>
+        <p>24 de diciembre de 2026</p>
+        <p>Próximamente compartiremos el horario.</p>
       </div>
-
       <div class="card">
         <div class="ornament">✧</div>
-        <h2>Fiesta</h2>
-        <p>¡Después de dar el sí, queremos celebrar con vos!</p>
+        <h2>La celebración</h2>
+        <p>Después de la ceremonia, queremos seguir celebrando esta historia junto a quienes forman parte de ella.</p>
         <p>Próximamente compartiremos los detalles.</p>
       </div>
-
       <div class="actions">
-        <a class="action outline" href="#ubicacion">Ver ubicación</a>
+        <a class="action" id="mapButton" href="#" target="_blank" rel="noopener">Cómo llegar</a>
       </div>
     </div>
   </section>
 
-  <!-- DRESS CODE -->
   <section class="soft-bg">
     <div class="section-inner">
-      <div class="script">Un detalle especial</div>
-      <h2>Dress code</h2>
+      <div class="small">Un detalle para compartir</div>
+      <div class="script">Dress code</div>
       <div class="rule"></div>
-      <p>Queremos que nos acompañes con tu mejor look.</p>
-
-      <div class="card">
-        <h2>Elegancia</h2>
-        <p>Próximamente indicaremos el código de vestimenta y los colores sugeridos.</p>
+      <p>Nos gustaría que nos acompañes con una vestimenta elegante, en alguno de estos tonos:</p>
+      <div class="color-options">
+        <div class="color-choice"><span class="swatch blue"></span>Azul</div>
+        <div class="color-choice"><span class="swatch black"></span>Negro</div>
       </div>
     </div>
   </section>
 
-  <!-- GALERÍA -->
   <section>
     <div class="section-inner">
-      <div class="script">Nuestros recuerdos</div>
-      <h2>Un poquito de nosotros</h2>
-      <p>Algunas imágenes de nuestra historia de amor.</p>
+      <div class="small">Un gesto de cariño</div>
+      <div class="script">Tu presencia es nuestro mejor regalo</div>
+      <div class="rule"></div>
+      <p>Lo más importante para nosotros es compartir este día con vos. Si además deseás hacernos un regalo, una colaboración para esta nueva etapa que comenzamos será recibida con muchísimo cariño.</p>
+      <div class="card">
+        <div class="ornament">♡</div>
+        <p>Más adelante compartiremos los datos para quienes deseen hacerlo.</p>
+      </div>
+    </div>
+  </section>
 
+  <section class="soft-bg">
+    <div class="section-inner">
+      <div class="script">¡Te esperamos!</div>
+      <div class="rule"></div>
+      <p>Nos va a hacer muy felices que seas parte de este momento tan importante para nuestra familia.</p>
+      <div class="actions">
+        <a class="action" id="rsvpButton" href="#" target="_blank" rel="noopener">Confirmar asistencia</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-inner">
+      <div class="small">Un recorrido por nuestra historia</div>
+      <div class="script">Nuestros recuerdos</div>
+      <p>Once años, una familia y miles de momentos que nos trajeron hasta acá.</p>
       <div class="gallery">
         <div class="photo">Foto principal de los novios</div>
         <div class="photo">Foto 2</div>
@@ -416,59 +354,14 @@ footer .names {
     </div>
   </section>
 
-  <!-- REGALOS -->
-  <section class="soft-bg">
-    <div class="section-inner">
-      <div class="script">Un regalo especial</div>
-      <h2>Tu presencia es nuestro mejor regalo</h2>
-      <p>Si además querés hacernos un presente, próximamente compartiremos algunas opciones.</p>
-
-      <div class="card">
-        <div class="ornament">♡</div>
-        <p>Información de regalos y transferencia próximamente.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- UBICACIÓN -->
-  <section id="ubicacion">
-    <div class="section-inner">
-      <div class="script">¿Nos acompañás?</div>
-      <h2>Queremos compartirlo con vos</h2>
-      <p>La ubicación y los horarios se actualizarán aquí.</p>
-
-      <div class="actions">
-        <a class="action" id="mapButton" href="#" target="_blank">Cómo llegar</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONFIRMACIÓN -->
-  <section class="soft-bg">
-    <div class="section-inner">
-      <div class="script">¡Te esperamos!</div>
-      <h2>Confirmá tu asistencia</h2>
-      <p>Tu presencia hará que este día sea todavía más especial.</p>
-
-      <div class="actions">
-        <a class="action" id="rsvpButton" href="#" target="_blank">Confirmar por WhatsApp</a>
-      </div>
-
-      <p style="font-size:10px">¡Nos encantará celebrar con vos!</p>
-    </div>
-  </section>
-
-  <!-- FINAL -->
   <footer>
     <div class="ornament">✧ ♡ ✧</div>
     <div class="names">Juan Cruz & Danae</div>
     <p>24 · 12 · 2026</p>
-    <p>Con amor, los esperamos.</p>
+    <p>Con todo nuestro amor.</p>
   </footer>
-
 </main>
 
-<!-- BOTÓN DE MÚSICA -->
 <button id="music" onclick="toggleMusic()" aria-label="Activar música">♫</button>
 <audio id="song" loop></audio>
 
@@ -478,53 +371,47 @@ const WEDDING_DATE = new Date('2026-12-24T20:00:00');
 function openInvitation() {
   document.getElementById('cover').style.display = 'none';
   document.getElementById('invitation').classList.add('visible');
-  window.scrollTo(0,0);
+  window.scrollTo(0, 0);
 }
 
 function updateCountdown() {
   const diff = WEDDING_DATE.getTime() - Date.now();
-  const ids = ['days','hours','minutes','seconds'];
-
+  const ids = ['days', 'hours', 'minutes', 'seconds'];
   if (diff <= 0) {
     ids.forEach(id => document.getElementById(id).textContent = '00');
     return;
   }
-
   const values = [
     Math.floor(diff / 86400000),
     Math.floor((diff % 86400000) / 3600000),
     Math.floor((diff % 3600000) / 60000),
     Math.floor((diff % 60000) / 1000)
   ];
-
-  ids.forEach((id,i) => {
-    document.getElementById(id).textContent = String(values[i]).padStart(2,'0');
+  ids.forEach((id, i) => {
+    document.getElementById(id).textContent = String(values[i]).padStart(2, '0');
   });
 }
-
 updateCountdown();
-setInterval(updateCountdown,1000);
+setInterval(updateCountdown, 1000);
 
-// DATOS PARA COMPLETAR
 const WHATSAPP = ''; // Ejemplo: 5492641234567
-const MAPS_URL = ''; // Pegar aquí el enlace de Google Maps
-const MUSIC_URL = ''; // Pegar aquí el enlace directo a un archivo de audio
+const MAPS_URL = ''; // Enlace de Google Maps de la parroquia
+const MUSIC_URL = ''; // Enlace directo al archivo de audio
 
-document.getElementById('rsvpButton').addEventListener('click',function(e) {
+document.getElementById('rsvpButton').addEventListener('click', function(e) {
   if (!WHATSAPP) {
     e.preventDefault();
     alert('Pronto habilitaremos la confirmación de asistencia.');
     return;
   }
-
   this.href = 'https://wa.me/' + WHATSAPP +
     '?text=' + encodeURIComponent('¡Hola Juan y Danae! Confirmo mi asistencia a su casamiento del 24 de diciembre. ❤️');
 });
 
-document.getElementById('mapButton').addEventListener('click',function(e) {
+document.getElementById('mapButton').addEventListener('click', function(e) {
   if (!MAPS_URL) {
     e.preventDefault();
-    alert('Pronto compartiremos la ubicación del evento.');
+    alert('Pronto compartiremos la ubicación exacta de la ceremonia.');
   } else {
     this.href = MAPS_URL;
   }
@@ -538,15 +425,12 @@ function toggleMusic() {
     alert('Pronto agregaremos la música de nuestra invitación.');
     return;
   }
-
   if (!playing) {
     audio.src = MUSIC_URL;
-
     audio.play().then(() => {
       playing = true;
       document.getElementById('music').textContent = 'Ⅱ';
     }).catch(() => alert('No se pudo reproducir la música. Intentá nuevamente.'));
-
   } else {
     audio.pause();
     playing = false;
@@ -554,6 +438,5 @@ function toggleMusic() {
   }
 }
 </script>
-
 </body>
 </html>
